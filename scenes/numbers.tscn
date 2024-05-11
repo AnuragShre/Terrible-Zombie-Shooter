@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://daea65mxfw7di"]
+
+[ext_resource type="Script" path="res://scripts/Numbers.gd" id="1_qf5u2"]
+[ext_resource type="FontFile" uid="uid://dyfl5kbvsb62b" path="res://good timing bd.otf" id="2_jgp07"]
+[ext_resource type="Texture2D" uid="uid://dje8bgrejsgyd" path="res://PNG/weapon_gun.png" id="3_0p0i1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjmpn"]
+font = ExtResource("2_jgp07")
+font_size = 85
+font_color = Color(0, 0.721692, 0.722371, 1)
+outline_size = 10
+outline_color = Color(0.474797, 8.48304e-07, 2.40654e-07, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Numbers" type="CanvasLayer"]
+script = ExtResource("1_qf5u2")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.888889
+anchor_top = 0.882716
+anchor_right = 0.987413
+anchor_bottom = 0.962192
+offset_right = 113.5
+offset_bottom = 51.5001
+scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="PanelContainer"]
+self_modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_yjmpn")
+horizontal_alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(45, 47.4007)
+rotation = 1.5708
+scale = Vector2(3.67376, 5)
+texture = ExtResource("3_0p0i1")
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.0225694
+anchor_top = 0.0216049
+anchor_right = 0.155816
+anchor_bottom = 0.10108
+offset_right = 73.4992
+offset_bottom = 51.5001
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="PanelContainer2"]
+self_modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Score: "
+label_settings = SubResource("LabelSettings_yjmpn")
+horizontal_alignment = 2
+
+[node name="PanelContainer3" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.155382
+anchor_top = 0.0246914
+anchor_right = 0.288628
+anchor_bottom = 0.104167
+offset_right = 153.5
+offset_bottom = 51.5001
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="PanelContainer3"]
+self_modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_yjmpn")

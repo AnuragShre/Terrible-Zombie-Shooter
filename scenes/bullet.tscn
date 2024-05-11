@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwc87xo6k8ds7"]
+
+[ext_resource type="Texture2D" uid="uid://dje8bgrejsgyd" path="res://PNG/weapon_gun.png" id="1_3b6r0"]
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_l2y1u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cuser"]
+radius = 5.0
+height = 24.0
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_l2y1u")
+Bspeed = 1200
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3b6r0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cuser")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
